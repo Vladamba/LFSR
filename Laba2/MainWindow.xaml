@@ -1,0 +1,32 @@
+﻿<Window x:Class="Laba2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500">
+    <StackPanel>
+        <Button Content="Выбрать файл" Width="100" Margin="10px" Click="btnClickOpenFile"/>
+        <TextBlock Text="Введите ключ:" Margin="10px 0px"/>
+        <TextBox Name="tbKey" Margin="10px 0px 10px 0px" PreviewTextInput="tbPreviewText"/>
+        <Button Content="Сохранить файл" Width="100" Margin="10px" Click="btnClickSaveFile"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130px"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Исходный тескт:" Margin="10px 0px"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Name="tbSourceText" Margin="10px 0px"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Полученный ключ: " Margin="10px 0px"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="tbKeyText" Margin="10px 0px"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Полученный текст:" Margin="10px 0px"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Name="tbResultText" Margin="10px 0px"/>
+        </Grid>
+    </StackPanel>
+</Window>
